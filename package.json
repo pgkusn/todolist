@@ -42,24 +42,39 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
+      "plugin:vue/vue3-recommended",
       "@vue/standard"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
+    "rules": {
+      "brace-style": [
+        "error",
+        "stroustrup"
+      ],
+      "indent": [
+        "error",
+        4
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "vue/html-indent": [
+        "error",
+        4
+      ],
+      "vue/max-attributes-per-line": [
+        "error",
+        {
+          "singleline": 3
         }
-      }
-    ]
+      ],
+      "import/no-absolute-path": "off",
+      "no-undef": "off",
+      "eol-last": "off"
+    }
   },
   "browserslist": [
     "> 1%",
