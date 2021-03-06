@@ -132,6 +132,7 @@ export default {
 
             if (!event.target.value.trim()) {
                 deleteHandler({ id });
+                return;
             }
 
             await store.dispatch('updateTodo', {
